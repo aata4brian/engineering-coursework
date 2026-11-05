@@ -21,3 +21,7 @@ Pemeriksaan otomatis GitHub memakai perintah yang sama. Eksperimen ML penuh dan 
 Versi untuk reproduksi ML di AATA: Python 3.12.10, NumPy 1.26.4, pandas 2.2.3, scikit-learn 1.6.1, Matplotlib 3.10.1. Pemeriksaan host Linux memakai Python 3.12.14 dan scikit-learn 1.8.0.
 
 RMS kalibrasi bukan bukti akurasi pose dunia nyata. Koefisien distorsi besar menunjukkan perlunya memeriksa stabilitas fit dengan cakupan papan dan sudut pengambilan yang lebih beragam. Ukuran kotak dan panjang fokus nominal lensa belum diukur; angka fisik turunan tidak dijadikan klaim portofolio.
+
+## Preprocessing
+
+Uji Linux dengan Python 3.12 dan scikit-learn 1.8.0. Jalankan `python projects/preprocessing/check.py`. Imputasi, capping, standardisasi, kategori baru, dan penolakan data latih yang tidak valid lulus. Hasil contoh disimpan bersama kode.

@@ -70,5 +70,17 @@
     "status": "CLI dengan uji regresi transaksi dan peminjaman",
     "attribution": "Berasal dari arsip PBO Brian yang menyertakan brief kelompok. Tidak diklaim sebagai karya individu sepenuhnya.",
     "tier": "supporting"
+  },
+  {
+    "slug": "preprocessing",
+    "title": "Preprocessing sebelum data masuk ke model",
+    "course": "Pembelajaran Mesin",
+    "source": "Tugas preprocessing dan praktikum TM1–3",
+    "summary": "Imputasi, capping IQR, standardisasi, dan encoding dengan statistik dari data latih.",
+    "result": "Median usia 27; batas pengeluaran 60–220; kategori baru tertangani.",
+    "limit": "Tujuh baris fiktif untuk memeriksa transformasi. Belum ada evaluasi model.",
+    "status": "Contoh dan uji regresi dapat dijalankan",
+    "attribution": "Tugas preprocessing atas nama Brian; contoh data fiktif dan pemisahan fit/transform ditambahkan saat kurasi.",
+    "tier": "lab-note"
   }
 ]

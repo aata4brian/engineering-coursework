@@ -1,0 +1,24 @@
+{
+  "train_rows": 5,
+  "test_rows": 2,
+  "age_median_train": 27.0,
+  "spending_bounds_train": [
+    60.0,
+    220.0
+  ],
+  "train_spending_clipped": 1,
+  "test": [
+    {
+      "Age": 0.0,
+      "Annual_Spending": 1.748315,
+      "Membership_Type_basic": 0.0,
+      "Membership_Type_plus": 0.0
+    },
+    {
+      "Age": 2.698978,
+      "Annual_Spending": -0.437079,
+      "Membership_Type_basic": 1.0,
+      "Membership_Type_plus": 0.0
+    }
+  ]
+}
