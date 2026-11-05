@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "machine-failure",
+    "title": "Machine Failure: SVM & PCA",
+    "course": "Pembelajaran Mesin",
+    "source": "Laptop · Semester 5 / Machine Learning / TM 191026",
+    "summary": "Membandingkan SVM default, tuning C, dan PCA pada lima fitur sensor AI4I.",
+    "result": "F1 test 0,5714; recall 0,4412. Model menang tanpa PCA.",
+    "limit": "Dataset sintetis; 38 dari 68 kasus gagal masih terlewat. Bukan prediksi remaining useful life.",
+    "status": "Eksperimen dengan hasil tersimpan",
+    "attribution": "Tugas atas nama Brian; kurasi mempertahankan metode dan hasil sumber.",
+    "tier": "featured"
+  },
+  {
+    "slug": "ensemble-learning",
+    "title": "Ensemble Learning: Voting & Boosting",
+    "course": "Pembelajaran Mesin",
+    "source": "Google Drive · Semester_5 / Machine Learning / Tugas TM 8 / Ensemble_Learning",
+    "summary": "Hard/soft voting, pembaruan bobot AdaBoost, serta perbandingan model pohon pada dataset publik.",
+    "result": "AdaBoost 100: F1 test 0,9383 untuk kelas malignant; dipilih dari CV.",
+    "limit": "Dataset Wisconsin Breast Cancer, bukan churn pelanggan. Eksperimen pendidikan, belum tervalidasi klinis.",
+    "status": "Eksperimen dengan hasil tersimpan",
+    "attribution": "Paket tugas Brian; tidak diklaim sebagai produk diagnosis.",
+    "tier": "lab-note"
+  },
+  {
+    "slug": "clustering",
+    "title": "Clustering: Centroid, Fuzzy & Hierarchy",
+    "course": "Pembelajaran Mesin",
+    "source": "Laptop · Semester 5 / Machine Learning / Tugas Clustering",
+    "summary": "Melacak iterasi K-Means, Fuzzy C-Means, complete/single linkage, dan silhouette manual.",
+    "result": "Silhouette manual dan scikit-learn sama: 0,675267. K-Means dan single linkage menghasilkan partisi identik untuk data latihan ini.",
+    "limit": "Data latihan kecil; nilai silhouette tidak membuktikan segmentasi pelanggan nyata.",
+    "status": "Notebook dan program runnable",
+    "attribution": "Notebook tugas mencantumkan Brian. Data latihan tertanam dipertahankan.",
+    "tier": "lab-note"
+  },
+  {
+    "slug": "camera-calibration",
+    "title": "Chessboard Camera Calibration",
+    "course": "Visi Komputer",
+    "source": "Laptop dan Google Drive · Computer Vision / Calibration · Visi_Komputer / Tugas",
+    "summary": "Kalibrasi chessboard 9×6, error per-view, diagnosis cakupan frame, dan ekspor parameter.",
+    "result": "Uji ulang pada 15 foto asli beresolusi 2448×2048; RMS reprojection error 1,6258 px.",
+    "limit": "Koefisien distorsi besar; stabilitas fit perlu diperiksa dengan sudut dan cakupan papan yang lebih beragam. Ukuran kotak serta focal length nominal lensa belum diukur.",
+    "status": "Dijalankan ulang pada foto asli",
+    "attribution": "Dikurasi dari notebook dalam arsip tugas Brian. Spesifikasi kamera ditandai sebagai asumsi konfigurasi.",
+    "tier": "supporting"
+  },
+  {
+    "slug": "serial-irrigation",
+    "title": "Two-Board Serial Irrigation",
+    "course": "Sistem Tertanam & IoT",
+    "source": "Laptop · Semester 4 / IOT / tugas atas nama Brian",
+    "summary": "Dua mikrokontroler bertukar perintah kelembapan untuk mengendalikan katup.",
+    "result": "Kurasi menambahkan katup tertutup saat startup, input tak valid, atau komunikasi terputus >1 detik.",
+    "limit": "Uji logika host tidak menggantikan uji dua board. Persentase berasal dari pemetaan ADC; kalibrasi sensor dan driver katup tetap diperlukan.",
+    "status": "Prototipe firmware; uji logika",
+    "attribution": "Dikembangkan dari sketch transmitter dan receiver dalam folder tugas Brian.",
+    "tier": "supporting"
+  },
+  {
+    "slug": "bookstore",
+    "title": "AATA Bookstore in C++",
+    "course": "Pemrograman Berorientasi Objek",
+    "source": "Laptop · Semester 3 / PBO / 13",
+    "summary": "Katalog buku, ebook, audiobook, saldo anggota, transaksi, peminjaman, dan log.",
+    "result": "Uji transaksi, penolakan saldo/stok, pengembalian ganda, diskon poin, ID ganda, dan pemulihan input lulus.",
+    "limit": "Studi kasus kelompok; pembagian kontribusi asli belum tercatat. Data anggota dan pinjaman masih berada di memori, belum persisten antarsesi.",
+    "status": "CLI dengan uji regresi transaksi dan peminjaman",
+    "attribution": "Berasal dari arsip PBO Brian yang menyertakan brief kelompok. Tidak diklaim sebagai karya individu sepenuhnya.",
+    "tier": "supporting"
+  }
+]

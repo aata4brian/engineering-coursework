@@ -1,0 +1,3 @@
+Metode,n_estimators,F1 validasi
+AdaBoost,100,0.9730438715513342
+Gradient Boosting,50,0.935588469501513

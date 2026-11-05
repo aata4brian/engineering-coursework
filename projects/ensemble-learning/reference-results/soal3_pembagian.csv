@@ -1,0 +1,4 @@
+Bagian,Malignant (0),Benign (1),Total
+Seluruh data,212,357,569
+Train,170,285,455
+Test,42,72,114

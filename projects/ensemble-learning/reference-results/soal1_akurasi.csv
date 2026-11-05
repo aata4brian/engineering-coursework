@@ -1,0 +1,5 @@
+Model,Benar,Salah,Accuracy
+A,7,3,0.7
+B,7,3,0.7
+C,6,4,0.6
+Hard Voting,9,1,0.9

@@ -1,0 +1,9 @@
+__pycache__/
+.venv/
+hasil/
+data/
+calibration-results/
+*.log
+log_aata.txt
+bookstore
+irrigation-test

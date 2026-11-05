@@ -1,0 +1,11 @@
+Data,Aktual,A,B,C,Suara Fraud,Suara Legitimate,Hard Voting
+D1,Fraud,Fraud,Fraud,Legitimate,2,1,Fraud
+D2,Legitimate,Legitimate,Fraud,Legitimate,1,2,Legitimate
+D3,Fraud,Legitimate,Fraud,Fraud,2,1,Fraud
+D4,Legitimate,Legitimate,Legitimate,Fraud,1,2,Legitimate
+D5,Fraud,Fraud,Legitimate,Fraud,2,1,Fraud
+D6,Legitimate,Fraud,Legitimate,Legitimate,1,2,Legitimate
+D7,Fraud,Fraud,Fraud,Legitimate,2,1,Fraud
+D8,Legitimate,Legitimate,Legitimate,Legitimate,0,3,Legitimate
+D9,Fraud,Legitimate,Fraud,Legitimate,1,2,Legitimate
+D10,Legitimate,Legitimate,Fraud,Legitimate,1,2,Legitimate
