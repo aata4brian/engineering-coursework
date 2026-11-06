@@ -52,6 +52,8 @@ with patch("app.time.monotonic", return_value=109):
     assert stale["closest"] is None and stale["detections"] == []
     assert stale["fps"] == 0 and camera.get_snapshot()[1] is None
 
+camera = CameraProcessor(None)
+camera.set_settings("Biru", 180)
 with ThreadingHTTPServer(("127.0.0.1", 0), Handler) as server:
     server.camera = camera
     worker = Thread(target=server.serve_forever)
