@@ -11,6 +11,7 @@ Koleksi proyek yang dirapikan dari tugas kuliah saya di Teknik Robotika dan Kece
 | [Serial Irrigation](projects/serial-irrigation) | Sensor dan kontrol katup dua board | Firmware, uji logika host, timeout komunikasi |
 | [AATA Bookstore](projects/bookstore) | OOP C++, katalog, transaksi, peminjaman | Program CLI, contoh input; brief berasal dari tugas kelompok |
 | [Preprocessing](projects/preprocessing) | Imputasi, IQR, standardisasi dan encoding dari data latih | Contoh fiktif dan uji transformasi |
+| [Deteksi warna ESP32-CAM](projects/color-monitor) | HSV dan jarak dalam gambar pada dashboard lokal | Frame sintetis dan uji API |
 
 Lihat [halaman proyek dan grafiknya](https://moch-brian-mursyidan-baldan-portfol.vercel.app/coursework.html).
 

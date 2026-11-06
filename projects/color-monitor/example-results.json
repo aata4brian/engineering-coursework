@@ -1,0 +1,24 @@
+[
+  {
+    "warna": "Merah",
+    "luas_px2": 696,
+    "x": 20,
+    "y": 75,
+    "lebar": 30,
+    "tinggi": 25,
+    "jarak_bawah_px": 20,
+    "jarak_bawah_persen": 16.8,
+    "kedekatan_bawah_persen": 83.2
+  },
+  {
+    "warna": "Biru",
+    "luas_px2": 936,
+    "x": 80,
+    "y": 25,
+    "lebar": 40,
+    "tinggi": 25,
+    "jarak_bawah_px": 70,
+    "jarak_bawah_persen": 58.8,
+    "kedekatan_bawah_persen": 41.2
+  }
+]

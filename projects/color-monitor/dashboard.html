@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AATA | ESP32-CAM Color Monitor</title>
+  <style>
+    :root { color-scheme:dark; --bg:#0a1020; --panel:#141d30; --edge:#27374f; --text:#e9f1fb; --mute:#98abc3; --cyan:#38c9d5; --green:#75dbac; }
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 80% 0%,#16243b,#0a1020 60%);color:var(--text);font:15px/1.5 system-ui,Segoe UI,Arial,sans-serif}
+    .page{max-width:1170px;margin:0 auto;padding:28px 20px 46px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:23px}
+    .overline{font-size:11px;letter-spacing:2px;color:var(--cyan);font-weight:700}h1{font-size:27px;margin:4px 0 0;letter-spacing:-.6px}p{margin:4px 0;color:var(--mute)}
+    .pill{padding:7px 13px;border:1px solid var(--edge);background:var(--panel);border-radius:99px;font-size:13px;white-space:nowrap}
+    .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#e6aa54;margin-right:8px}.dot.on{background:var(--green)}
+    .layout{display:grid;grid-template-columns:minmax(290px,1.55fr) minmax(260px,1fr);gap:18px;align-items:start}
+    .card{background:var(--panel);border:1px solid var(--edge);border-radius:16px;overflow:hidden;box-shadow:0 16px 40px #0002}
+    .cardhead{padding:17px 19px;border-bottom:1px solid var(--edge);display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .cardhead strong{font-size:15px}.cardhead span{font-size:12px;color:var(--mute)}
+    .viewer{background:#04070e;min-height:420px;display:flex;align-items:center;justify-content:center;padding:14px}
+    .viewer img{display:block;max-width:100%;max-height:68vh;width:auto;height:auto;object-fit:contain;background:#0d1628;border-radius:6px}
+    .hint{padding:12px 18px;color:var(--mute);font-size:12px;border-top:1px solid var(--edge)}
+    .side{display:grid;gap:18px}.body{padding:18px}.big{font-size:38px;font-weight:750;letter-spacing:-1.4px;margin-top:3px}.label{color:var(--mute);font-size:12px}
+    .mainrow{display:flex;justify-content:space-between;align-items:end;gap:10px}.small{font-size:12px;color:var(--mute)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:16px}.metric{padding:12px;background:#0e1729;border-radius:10px}.metric b{display:block;font-size:21px;margin-top:4px}
+    label{display:block;color:var(--mute);font-size:12px;margin-bottom:6px}select,input[type=range]{width:100%}select{background:#0e1729;color:var(--text);padding:10px;border:1px solid var(--edge);border-radius:8px;font-size:14px}
+    .range{margin-top:15px}input[type=range]{accent-color:var(--cyan)}.bottom{font-size:13px;color:var(--mute);margin-top:14px;line-height:1.65}
+    .objects{max-height:300px;overflow:auto}.object{padding:10px 12px;background:#0e1729;border:1px solid var(--edge);border-radius:9px;margin-top:8px;display:flex;justify-content:space-between;gap:8px}.object span{font-weight:650}.object small{display:block;color:var(--mute)}
+    .error{color:#ffa4a4;font-size:12px;word-break:break-word}.footer{color:var(--mute);font-size:12px;margin-top:18px}
+    @media(max-width:770px){.layout{grid-template-columns:1fr}.viewer{min-height:340px}.viewer img{max-height:62vh}h1{font-size:22px}}
+  </style>
+</head>
+<body>
+<main class="page">
+  <header class="top"><div><div class="overline">AATA · ROBOTICS EXPERIMENT</div><h1>ESP32-CAM Color Monitor</h1><p>Streaming kamera & analisis warna diproses di laptop</p></div><div class="pill"><span id="dot" class="dot"></span><span id="status">Menghubungkan...</span></div></header>
+  <section class="layout">
+    <article class="card"><div class="cardhead"><strong>Live Camera</strong><span>Rotasi 90° ke kanan</span></div><div class="viewer"><img id="camera-frame" style="visibility:hidden" src="/video" alt="Stream kamera ESP32-CAM yang dianotasi"></div><div class="hint">Garis di tepi bawah = patokan posisi. Garis dari objek ke bawah menunjukkan jarak dalam gambar.</div></article>
+    <div class="side">
+      <article class="card"><div class="cardhead"><strong>Deteksi terdekat ke bawah</strong><span>Bounding box</span></div><div class="body"><div class="mainrow"><div><div class="label">Warna objek</div><div class="big" id="nearestColor">—</div></div><div class="small" id="fps">0 fps</div></div>
+      <div class="grid2"><div class="metric"><div class="label">Jarak ke bawah</div><b id="gap">— px</b></div><div class="metric"><div class="label">Kedekatan bawah</div><b id="proximity">—%</b></div></div><div class="bottom" id="info">Menunggu objek terdeteksi...</div></div></article>
+      <article class="card"><div class="cardhead"><strong>Pengaturan deteksi</strong><span>Real-time</span></div><div class="body"><label for="color">Warna target</label><select id="color"><option>Semua</option><option>Merah</option><option>Oranye</option><option>Kuning</option><option>Hijau</option><option>Biru</option></select><div class="range"><label for="area">Luas minimum objek: <b id="areaValue">180</b> px²</label><input id="area" type="range" min="30" max="3000" step="10" value="180"></div><div class="bottom">Pilih <b>Semua</b> untuk mendeteksi beberapa warna sekaligus. Jika noise banyak, naikkan luas minimum.</div></div></article>
+      <article class="card"><div class="cardhead"><strong>Objek terdeteksi</strong><span id="total">0 objek</span></div><div class="body objects" id="objects"><p>Belum ada objek.</p></div></article>
+    </div>
+  </section><div class="footer">Jarak dalam piksel/persen adalah jarak pada citra, bukan jarak nyata (cm). Akurasi dipengaruhi pencahayaan, warna latar, dan posisi kamera.</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+let changeTimer=null;
+async function saveSettings(){try{await fetch('/api/settings',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({color:$('color').value,min_area:Number($('area').value)})});}catch(e){console.warn(e)}}
+$('color').addEventListener('change',saveSettings);
+$('area').addEventListener('input',()=>{$('areaValue').textContent=$('area').value;clearTimeout(changeTimer);changeTimer=setTimeout(saveSettings,150)});
+async function update(){try{let r=await fetch('/api/state',{cache:'no-store'});let d=await r.json();$('camera-frame').style.visibility=d.connected?'visible':'hidden';$('dot').classList.toggle('on',d.connected);$('status').textContent=d.connected?'Kamera terhubung':'Kamera belum mengirim frame baru';$('fps').textContent=d.fps.toFixed(1)+' fps';let n=d.closest;
+$('nearestColor').textContent=n?n.warna:'—';$('gap').textContent=n?n.jarak_bawah_px+' px':'— px';$('proximity').textContent=n?n.kedekatan_bawah_persen.toFixed(1)+'%':'—%';$('info').textContent=n?'Jarak '+n.jarak_bawah_persen.toFixed(1)+'% dari tinggi gambar. Semakin kecil jarak, semakin dekat ke tepi bawah.':d.status;
+$('total').textContent=d.detections.length+' objek';$('objects').replaceChildren();if(!d.detections.length){let p=document.createElement('p');p.textContent='Belum ada objek sesuai pengaturan.';$('objects').appendChild(p)}else{d.detections.slice(0,12).forEach((o,i)=>{let el=document.createElement('div');el.className='object';let left=document.createElement('div');let name=document.createElement('span');name.textContent=o.warna+(i===0?' · TERDEKAT':'');let small=document.createElement('small');small.textContent='Luas '+o.luas_px2+' px²';left.append(name,small);let right=document.createElement('strong');right.textContent=o.jarak_bawah_px+' px';el.append(left,right);$('objects').appendChild(el)})}
+}catch(e){$('dot').classList.remove('on');$('status').textContent='Dashboard offline'}}
+setInterval(update,500);update();
+</script>
+</body></html>

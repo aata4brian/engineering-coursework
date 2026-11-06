@@ -82,5 +82,17 @@
     "status": "Contoh dan uji regresi dapat dijalankan",
     "attribution": "Tugas preprocessing atas nama Brian; contoh data fiktif dan pemisahan fit/transform ditambahkan saat kurasi.",
     "tier": "lab-note"
+  },
+  {
+    "slug": "color-monitor",
+    "title": "Deteksi warna dari ESP32-CAM",
+    "course": "Eksperimen Robotika",
+    "source": "Paket dashboard prototipe ESP32-CAM",
+    "summary": "Rotasi frame, segmentasi HSV, dan posisi relatif ke tepi bawah gambar.",
+    "result": "Objek merah 20 px dan biru 70 px dari tepi bawah pada frame sintetis.",
+    "limit": "Jarak diukur dalam piksel. Stream kamera, firmware, pin dan gerakan robot fisik belum diuji pada kurasi ini.",
+    "status": "Pengolahan frame sintetis dan API lokal teruji",
+    "attribution": "Kebutuhan rotasi, warna dan pengolahan di laptop berasal dari prototipe Brian. Dashboard awal dibuat dengan bantuan asisten.",
+    "tier": "supporting"
   }
 ]
