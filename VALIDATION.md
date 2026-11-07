@@ -29,3 +29,7 @@ Uji Linux dengan Python 3.12 dan scikit-learn 1.8.0. Jalankan `python projects/p
 ## Deteksi warna ESP32-CAM
 
 Pada Linux dengan Python 3.12 dan OpenCV 4.13, `python projects/color-monitor/check.py` lulus untuk rotasi, deteksi dan urutan objek, noise kecil, filter warna, frame kosong, frame basi, serta pengaturan HTTP valid dan invalid. Masukan berupa frame sintetis.
+
+## Antrean FIFO
+
+Uji CLI Linux: `python projects/queue-lab/check.py` memakai C++17 dan UndefinedBehaviorSanitizer. FIFO, kapasitas, wrap-around, nilai -1, total di atas batas int, input invalid, dan EOF lulus.

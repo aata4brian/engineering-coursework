@@ -18,3 +18,9 @@ Untuk memakai kamera dengan firmware MJPEG yang sudah aktif, jalankan `python ap
 Pada satu frame sintetis yang sudah diputar, objek merah berada 20 piksel dari tepi bawah dan objek biru 70 piksel. Bintik hijau kecil terbuang. Uji juga mencakup filter warna, frame tanpa objek, data basi, dan respons HTTP untuk pengaturan valid serta tidak valid.
 
 Jarak piksel menunjukkan posisi pada gambar. Nilainya bergantung pada sudut kamera dan tidak dikonversi ke sentimeter. Uji memakai frame sintetis dan server lokal di Linux. Pengujian stream kamera asli, firmware, pin motor, serta robot fisik masih diperlukan.
+
+## Hubungan dengan uji motor
+
+Arsip prototipe memuat sketch uji motor ESP32 dan L298N yang terpisah dari dashboard kamera. Pemetaan yang terbaca di kode adalah IN1/IN2/ENA pada GPIO 26/27/25 dan IN3/IN4/ENB pada GPIO 14/32/33. Sketch uji menjalankan maju, mundur, dan putar secara berurutan dengan jeda berhenti. Dashboard di sini hanya membaca video MJPEG. Hasil deteksi tidak mengirim perintah motor. Pemetaan diperiksa dari kode dan belum dicocokkan ke kabel fisik dalam kurasi ini.
+
+Pada simulasi GPIO di Linux, enam kondisi menghasilkan level yang diharapkan: awal, maju, mundur, putar kanan, putar kiri, dan berhenti. Simulasi memeriksa level logika dari fungsi pada sketch. Arah fisik roda dan respons driver belum diukur.

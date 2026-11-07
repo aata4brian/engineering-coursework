@@ -12,6 +12,7 @@ Koleksi proyek yang dirapikan dari tugas kuliah saya di Teknik Robotika dan Kece
 | [AATA Bookstore](projects/bookstore) | OOP C++, katalog, transaksi, peminjaman | Program CLI, contoh input; brief berasal dari tugas kelompok |
 | [Preprocessing](projects/preprocessing) | Imputasi, IQR, standardisasi dan encoding dari data latih | Contoh fiktif dan uji transformasi |
 | [Deteksi warna ESP32-CAM](projects/color-monitor) | HSV dan jarak dalam gambar pada dashboard lokal | Frame sintetis dan uji API |
+| [Antrean FIFO](projects/queue-lab) | Queue linear, circular dan linked list di C++ | Uji CLI untuk wrap-around, input dan batas nilai |
 
 Lihat [halaman proyek dan grafiknya](https://moch-brian-mursyidan-baldan-portfol.vercel.app/coursework.html).
 

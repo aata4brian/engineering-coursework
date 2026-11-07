@@ -94,5 +94,17 @@
     "status": "Pengolahan frame sintetis dan API lokal teruji",
     "attribution": "Kebutuhan rotasi, warna dan pengolahan di laptop berasal dari prototipe Brian. Dashboard awal dibuat dengan bantuan asisten.",
     "tier": "supporting"
+  },
+  {
+    "slug": "queue-lab",
+    "title": "Tiga cara membuat antrean FIFO",
+    "course": "Struktur Data",
+    "source": "Kode praktikum dan jurnal Struktur Data atas nama Brian",
+    "summary": "Array linear, array melingkar, dan linked list dalam satu program C++.",
+    "result": "Urutan FIFO terjaga ketika slot array melingkar digunakan ulang. Nilai -1 dapat keluar sebagai data.",
+    "limit": "Kapasitas kedua array lima elemen. Pengujian menilai perilaku program, tanpa mengukur kinerja.",
+    "status": "Uji CLI Linux dengan UndefinedBehaviorSanitizer lulus",
+    "attribution": "Kode dan jurnal praktikum Brian. Penanganan input, nilai negatif, total besar, dan pembersihan node ditambahkan saat kurasi.",
+    "tier": "lab-note"
   }
 ]
