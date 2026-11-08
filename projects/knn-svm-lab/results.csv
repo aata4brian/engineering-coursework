@@ -1,0 +1,16 @@
+dataset,model,correct,test_n,accuracy,f1_macro
+Blobs,KNN manual,40,40,1.0000,1.0000
+Blobs,KNN sklearn,40,40,1.0000,1.0000
+Blobs,SVM manual,40,40,1.0000,1.0000
+Blobs,SVC linear,40,40,1.0000,1.0000
+Blobs,SVC RBF,40,40,1.0000,1.0000
+Moons,KNN manual,40,40,1.0000,1.0000
+Moons,KNN sklearn,40,40,1.0000,1.0000
+Moons,SVM manual,37,40,0.9250,0.9250
+Moons,SVC linear,37,40,0.9250,0.9250
+Moons,SVC RBF,40,40,1.0000,1.0000
+Circles,KNN manual,40,40,1.0000,1.0000
+Circles,KNN sklearn,40,40,1.0000,1.0000
+Circles,SVM manual,20,40,0.5000,0.4987
+Circles,SVC linear,17,40,0.4250,0.4159
+Circles,SVC RBF,40,40,1.0000,1.0000

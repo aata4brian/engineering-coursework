@@ -106,5 +106,29 @@
     "status": "Uji CLI Linux dengan UndefinedBehaviorSanitizer lulus",
     "attribution": "Kode dan jurnal praktikum Brian. Penanganan input, nilai negatif, total besar, dan pembersihan node ditambahkan saat kurasi.",
     "tier": "lab-note"
+  },
+  {
+    "slug": "c-basics",
+    "title": "Dasar C: integral dengan nilai dan pointer",
+    "course": "Dasar Pemrograman",
+    "source": "Dua versi kuis Dasar Pemrograman atas nama Brian",
+    "summary": "Satu program C membandingkan argumen nilai dan pointer pada jumlah Riemann kiri.",
+    "result": "Kedua cara menghasilkan 10,455 pada 100 interval; nilai analitik 10,5.",
+    "limit": "Satu fungsi dan rentang tetap. Perbandingan membahas cara mengirim argumen dan galat pendekatan.",
+    "status": "Uji CLI C17 dan UBSan lulus",
+    "attribution": "Dua versi kuis Brian digabung. Pemeriksaan input dan perbandingan dengan nilai analitik ditambahkan saat kurasi.",
+    "tier": "lab-note"
+  },
+  {
+    "slug": "knn-svm-lab",
+    "title": "KNN dan SVM pada tiga bentuk data",
+    "course": "Pembelajaran Mesin",
+    "source": "Skrip dan laporan praktikum KNN dan SVM atas nama Brian",
+    "summary": "Bandingkan implementasi manual dan pustaka pada split sintetis yang sama.",
+    "result": "Circles: SVC linear 17/40; SVC RBF dan dua versi KNN 40/40.",
+    "limit": "Tiga dataset sintetis dengan satu split tetap; hasil bergantung pada pola dan noise yang dipakai.",
+    "status": "15 hasil dan kasus gagal teruji",
+    "attribution": "Implementasi manual diadaptasi dari skrip praktikum Brian; evaluasi bersama dan uji kasus gagal ditambahkan saat kurasi.",
+    "tier": "lab-note"
   }
 ]

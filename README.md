@@ -13,6 +13,8 @@ Koleksi proyek yang dirapikan dari tugas kuliah saya di Teknik Robotika dan Kece
 | [Preprocessing](projects/preprocessing) | Imputasi, IQR, standardisasi dan encoding dari data latih | Contoh fiktif dan uji transformasi |
 | [Deteksi warna ESP32-CAM](projects/color-monitor) | HSV dan jarak dalam gambar pada dashboard lokal | Frame sintetis dan uji API |
 | [Antrean FIFO](projects/queue-lab) | Queue linear, circular dan linked list di C++ | Uji CLI untuk wrap-around, input dan batas nilai |
+| [Dasar C](projects/c-basics) | Jumlah Riemann dengan nilai dan pointer | Uji galat dan input batas |
+| [KNN dan SVM](projects/knn-svm-lab) | Implementasi manual dan pustaka pada tiga bentuk data | Hasil 15 konfigurasi dan uji input |
 
 Lihat [halaman proyek dan grafiknya](https://moch-brian-mursyidan-baldan-portfol.vercel.app/coursework.html).
 

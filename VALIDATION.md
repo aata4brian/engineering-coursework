@@ -33,3 +33,7 @@ Pada Linux dengan Python 3.12 dan OpenCV 4.13, `python projects/color-monitor/ch
 ## Antrean FIFO
 
 Uji CLI Linux: `python projects/queue-lab/check.py` memakai C++17 dan UndefinedBehaviorSanitizer. FIFO, kapasitas, wrap-around, nilai -1, total di atas batas int, input invalid, dan EOF lulus.
+
+## Dasar C dan KNN/SVM
+
+`python projects/c-basics/check.py` memeriksa kedua cara evaluasi fungsi terhadap galat analitik, termasuk input invalid, pada Linux dengan C17 dan UBSan. `python projects/knn-svm-lab/check.py` mengulang 15 hasil dari data sintetis dan menguji voting seri, vektor nol, serta validasi input.

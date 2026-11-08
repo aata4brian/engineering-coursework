@@ -17,3 +17,5 @@ jobs:
       - run: python -m pip install -r projects/color-monitor/requirements.txt
       - run: python projects/color-monitor/check.py
       - run: python projects/queue-lab/check.py
+      - run: python projects/c-basics/check.py
+      - run: python projects/knn-svm-lab/check.py
