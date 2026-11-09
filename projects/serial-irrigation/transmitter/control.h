@@ -1,10 +1,12 @@
 #pragma once
 // Bagian logika yang dapat diperiksa tanpa perangkat Arduino.
 inline int moisturePercent(int raw) {
-    return raw * 100 / 1023;
+    if (raw < 0 || raw > 1023) return -1;
+    return static_cast<int>(raw * 100L / 1023);
 }
 inline char irrigationCommand(int raw, int threshold = 30) {
-    return moisturePercent(raw) < threshold ? '1' : '0';
+    const int percent = moisturePercent(raw);
+    return percent >= 0 && percent < threshold ? '1' : '0';
 }
 struct ValveControl {
     bool open = false;

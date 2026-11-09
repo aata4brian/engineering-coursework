@@ -37,3 +37,7 @@ Uji CLI Linux: `python projects/queue-lab/check.py` memakai C++17 dan UndefinedB
 ## Dasar C dan KNN/SVM
 
 `python projects/c-basics/check.py` memeriksa kedua cara evaluasi fungsi terhadap galat analitik, termasuk input invalid, pada Linux dengan C17 dan UBSan. `python projects/knn-svm-lab/check.py` mengulang 15 hasil dari data sintetis dan menguji voting seri, vektor nol, serta validasi input.
+
+## Irigasi — pemetaan ADC
+
+Uji C++17 di Linux memeriksa semua 1.024 kode ADC, nilai batas ambang, ADC di luar rentang, startup, perintah invalid, timeout, serta rollover. Tipe long mencegah overflow pada perkalian ADC di AVR. Board dan toolchain Arduino belum diuji.

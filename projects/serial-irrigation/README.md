@@ -22,7 +22,7 @@ g++ -std=c++17 projects/serial-irrigation/test_control.cpp -o irrigation-test
 
 Board A: sensor analog A0. Board B: output kontrol katup D9. Pada keduanya SoftwareSerial RX=D2, TX=D3, 9600 baud. Hubungkan TX A ke RX B dan ground bersama; samakan level tegangan. Gunakan driver relay/MOSFET dan proteksi beban yang sesuai; pin mikrokontroler hanya mengirim sinyal kontrol.
 
-Unggah masing-masing sketch melalui Arduino IDE dengan library SoftwareSerial. Header `control.h` sudah disertakan di setiap folder sketch agar dapat dibuka langsung oleh Arduino IDE. Skema input asli: ADC dipetakan linear 0–1023 ke 0–100, siram jika <30. Arah dan rentang sensor nyata perlu dikalibrasi. Ini komunikasi serial lokal, belum terhubung ke internet. Uji host memeriksa ambang, komunikasi putus, perintah tidak valid, dan rollover waktu.
+Unggah masing-masing sketch melalui Arduino IDE dengan library SoftwareSerial. Header `control.h` sudah disertakan di setiap folder sketch agar dapat dibuka langsung oleh Arduino IDE. Skema input asli: ADC dipetakan linear 0–1023 ke 0–100, siram jika <30. Perkalian memakai tipe long karena 1023 × 100 melampaui rentang int 16-bit pada AVR. Masukan di luar 0–1023 menghasilkan perintah tutup dan penanda telemetri −1. Arah dan rentang sensor nyata perlu dikalibrasi. Ini komunikasi serial lokal, belum terhubung ke internet. Uji host memeriksa ambang, komunikasi putus, perintah tidak valid, dan rollover waktu.
 
 ## Asal dan kontribusi
 

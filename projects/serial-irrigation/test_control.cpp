@@ -6,6 +6,13 @@ int main() {
   assert(irrigationCommand(306)=='1');
   assert(irrigationCommand(307)=='0');
   assert(irrigationCommand(1023)=='0');
+  assert(moisturePercent(328)==32);
+  assert(moisturePercent(1023)==100);
+  assert(moisturePercent(-1)==-1 && moisturePercent(1024)==-1);
+  assert(irrigationCommand(-1)=='0' && irrigationCommand(1024)=='0');
+  for (int raw = 0; raw <= 1023; ++raw) {
+    assert(moisturePercent(raw) == raw * 100L / 1023);
+  }
   ValveControl v;
   assert(!v.update(0));
   v.receive('1',100); assert(v.update(1100)); assert(!v.update(1101));

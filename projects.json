@@ -53,7 +53,7 @@
     "course": "Sistem Tertanam & IoT",
     "source": "Laptop · Semester 4 / IOT / tugas atas nama Brian",
     "summary": "Dua mikrokontroler bertukar perintah kelembapan untuk mengendalikan katup.",
-    "result": "Kurasi menambahkan katup tertutup saat startup, input tak valid, atau komunikasi terputus >1 detik.",
+    "result": "Katup tertutup saat startup, ADC/perintah tidak valid, atau komunikasi putus >1 detik. Pemetaan 0–1023 memakai aritmetika 32-bit atau lebih lebar.",
     "limit": "Uji logika host tidak menggantikan uji dua board. Persentase berasal dari pemetaan ADC; kalibrasi sensor dan driver katup tetap diperlukan.",
     "status": "Prototipe firmware; uji logika",
     "attribution": "Dikembangkan dari sketch transmitter dan receiver dalam folder tugas Brian.",
