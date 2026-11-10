@@ -15,6 +15,7 @@ Koleksi proyek yang dirapikan dari tugas kuliah saya di Teknik Robotika dan Kece
 | [Antrean FIFO](projects/queue-lab) | Queue linear, circular dan linked list di C++ | Uji CLI untuk wrap-around, input dan batas nilai |
 | [Dasar C](projects/c-basics) | Jumlah Riemann dengan nilai dan pointer | Uji galat dan input batas |
 | [KNN dan SVM](projects/knn-svm-lab) | Implementasi manual dan pustaka pada tiga bentuk data | Hasil 15 konfigurasi dan uji input |
+| [Pengisian kotak](projects/plc-box-filling) | Model per scan untuk konveyor, counter dan Stop | Skenario uji 30 scan |
 
 Lihat [halaman proyek dan grafiknya](https://moch-brian-mursyidan-baldan-portfol.vercel.app/coursework.html).
 

@@ -41,3 +41,7 @@ Uji CLI Linux: `python projects/queue-lab/check.py` memakai C++17 dan UndefinedB
 ## Irigasi — pemetaan ADC
 
 Uji C++17 di Linux memeriksa semua 1.024 kode ADC, nilai batas ambang, ADC di luar rentang, startup, perintah invalid, timeout, serta rollover. Tipe long mencegah overflow pada perkalian ADC di AVR. Board dan toolchain Arduino belum diuji.
+
+## Otomasi pengisian kotak
+
+`python projects/plc-box-filling/check.py` memeriksa 30 scan model Python. Prioritas Stop, sensor tertahan, barang ke-10, penolakan pulsa tambahan, dan reset saat kotak pergi lulus. CX-Simulator, CX-Designer dan perangkat fisik belum diuji pada kurasi ini.

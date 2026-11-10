@@ -130,5 +130,17 @@
     "status": "15 hasil dan kasus gagal teruji",
     "attribution": "Implementasi manual diadaptasi dari skrip praktikum Brian; evaluasi bersama dan uji kasus gagal ditambahkan saat kurasi.",
     "tier": "lab-note"
+  },
+  {
+    "slug": "plc-box-filling",
+    "title": "Otomasi pengisian kotak",
+    "course": "Otomasi Industri",
+    "source": "Arsip tugas CP2E dan panel HMI",
+    "summary": "Simulasi per scan untuk dua konveyor, deteksi kotak, dan counter sepuluh barang.",
+    "result": "30 scan lulus, termasuk prioritas Stop, sensor tertahan, dan reset kotak.",
+    "limit": "Model Python terpisah. Timing PLC, indeks panel asli, dan perangkat fisik belum diuji.",
+    "status": "Simulasi logika Python lulus",
+    "attribution": "Brian menentukan kebutuhan dan arahan tampilan HMI. Berkas PLC, panel, dan kurasi dibantu asisten.",
+    "tier": "lab-note"
   }
 ]

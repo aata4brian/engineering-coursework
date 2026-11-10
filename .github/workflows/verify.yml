@@ -19,3 +19,4 @@ jobs:
       - run: python projects/queue-lab/check.py
       - run: python projects/c-basics/check.py
       - run: python projects/knn-svm-lab/check.py
+      - run: python projects/plc-box-filling/check.py
