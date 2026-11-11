@@ -16,6 +16,8 @@ Koleksi proyek yang dirapikan dari tugas kuliah saya di Teknik Robotika dan Kece
 | [Dasar C](projects/c-basics) | Jumlah Riemann dengan nilai dan pointer | Uji galat dan input batas |
 | [KNN dan SVM](projects/knn-svm-lab) | Implementasi manual dan pustaka pada tiga bentuk data | Hasil 15 konfigurasi dan uji input |
 | [Pengisian kotak](projects/plc-box-filling) | Model per scan untuk konveyor, counter dan Stop | Skenario uji 30 scan |
+| [Ketajaman PCB](projects/image-sharpness) | Empat operator fokus dan perbandingan skor | Delapan skor arsip dihitung ulang |
+| [Smartphone fuzzy](https://github.com/aata4brian/Spec-Based-Smartphone-Recommender) | API Mamdani pada repo asal | 16 uji perilaku API |
 
 Lihat [halaman proyek dan grafiknya](https://moch-brian-mursyidan-baldan-portfol.vercel.app/coursework.html).
 

@@ -45,3 +45,7 @@ Uji C++17 di Linux memeriksa semua 1.024 kode ADC, nilai batas ambang, ADC di lu
 ## Otomasi pengisian kotak
 
 `python projects/plc-box-filling/check.py` memeriksa 30 scan model Python. Prioritas Stop, sensor tertahan, barang ke-10, penolakan pulsa tambahan, dan reset saat kotak pergi lulus. CX-Simulator, CX-Designer dan perangkat fisik belum diuji pada kurasi ini.
+
+## Ketajaman citra PCB
+
+`python projects/image-sharpness/check.py` lulus untuk citra konstan, skala intensitas, referensi skalar/kernel dan masukan invalid. Delapan skor arsip juga dihitung ulang dari dua citra sumber privat dan cocok dengan toleransi relatif 1e-12. Timing benchmark tidak diulang; perbedaan CSV dan PDF dicatat dalam README.

@@ -142,5 +142,30 @@
     "status": "Simulasi logika Python lulus",
     "attribution": "Brian menentukan kebutuhan dan arahan tampilan HMI. Berkas PLC, panel, dan kurasi dibantu asisten.",
     "tier": "lab-note"
+  },
+  {
+    "slug": "image-sharpness",
+    "title": "Empat ukuran ketajaman citra PCB",
+    "course": "Visi Komputer",
+    "source": "Laporan dan hasil eksperimen UTS atas nama Brian",
+    "summary": "Brenner, Tenenbaum, squared gradient, dan MDCT pada dua citra tugas.",
+    "result": "Delapan skor cocok setelah dihitung ulang. Citra kedua mendapat skor 18,79–34,05% lebih tinggi.",
+    "limit": "Dua citra belum menilai akurasi umum. Timing CSV dan PDF berbeda dan belum diselaraskan.",
+    "status": "Fungsi dan skor terverifikasi",
+    "attribution": "Laporan UTS Brian; fungsi diambil dari paket eksperimen, validasi masukan dan uji regresi ditambahkan saat kurasi.",
+    "tier": "lab-note"
+  },
+  {
+    "slug": "smartphone-fuzzy",
+    "title": "Rekomendasi smartphone dengan fuzzy Mamdani",
+    "course": "Kecerdasan Buatan",
+    "source": "Repo Spec-Based-Smartphone-Recommender yang sudah ada",
+    "summary": "API rekomendasi berdasarkan preferensi fitur, kategori budget, dan minimum penyimpanan.",
+    "result": "16 uji lulus. Contoh API memfilter 830 baris menjadi 216 kandidat dan menampilkan 20 hasil.",
+    "limit": "Harga peluncuran dan aturan heuristik. Relevansi rekomendasi serta asal/izin dataset masih perlu dievaluasi.",
+    "status": "API dan validasi data teruji",
+    "attribution": "Proyek fuzzy dari arsip kuliah Brian. Kurasi melanjutkan repo yang sudah ada dan menambah pemeriksaan fitur tak hingga.",
+    "tier": "supporting",
+    "repository": "https://github.com/aata4brian/Spec-Based-Smartphone-Recommender"
   }
 ]
